@@ -39,7 +39,7 @@ function App() {
           autoSpeed={0.5}
           autoIntensity={4.0}
           takeoverDuration={0.25}
-          autoResumeDelay={1000}
+          autoResumeDelay={1500}
           autoRampDuration={0.8}
         />
       </div>
@@ -111,13 +111,14 @@ function App() {
                 "(okay maybe just a little)",
                 "Building AI systems that sometimes work",
                 "Professional Prompt Writer",
-                "Makes AI Models, can't make decisions"
+                "Makes ML Models, can't make decisions",
+                "If it works in prod, it was on purpose",
               ]}
               typingSpeed={65}
               pauseDuration={1500}
               showCursor
               cursorCharacter="_"
-              deletingSpeed={50}
+              deletingSpeed={40}
               cursorBlinkDuration={0.5}
               variableSpeed={undefined}
               onSentenceComplete={undefined}
