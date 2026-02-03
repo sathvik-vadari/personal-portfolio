@@ -1,6 +1,9 @@
 .text-type {
   display: inline-block;
   white-space: pre-wrap;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .text-type__cursor {

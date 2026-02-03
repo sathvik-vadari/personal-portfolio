@@ -7,3 +7,43 @@ declare module "*.svg" {
   const path: `${string}.svg`;
   export = path;
 }
+
+declare module "*.png" {
+  /**
+   * A path to the PNG file
+   */
+  const path: string;
+  export default path;
+}
+
+declare module "*.jpg" {
+  /**
+   * A path to the JPG file
+   */
+  const path: string;
+  export default path;
+}
+
+declare module "*.jpeg" {
+  /**
+   * A path to the JPEG file
+   */
+  const path: string;
+  export default path;
+}
+
+declare module "*.gif" {
+  /**
+   * A path to the GIF file
+   */
+  const path: string;
+  export default path;
+}
+
+declare module "*.webp" {
+  /**
+   * A path to the WebP file
+   */
+  const path: string;
+  export default path;
+}

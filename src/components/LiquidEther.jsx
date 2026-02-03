@@ -290,10 +290,8 @@ export default function LiquidEther({
           if (this.active) this.forceStop();
           return;
         }
-        if (this.mouse.isHoverInside) {
-          if (this.active) this.forceStop();
-          return;
-        }
+        // Auto-demo should run after resumeDelay regardless of hover state
+        // The onInteract callback will stop it if user moves cursor
         if (!this.active) {
           this.active = true;
           this.current.copy(this.mouse.coords);
@@ -1044,19 +1042,21 @@ export default function LiquidEther({
     webgl.start();
 
     // IntersectionObserver to pause rendering when not visible
+    // Only pause when completely out of view (intersectionRatio === 0)
     const io = new IntersectionObserver(
       entries => {
         const entry = entries[0];
         const isVisible = entry.isIntersecting && entry.intersectionRatio > 0;
         isVisibleRef.current = isVisible;
         if (!webglRef.current) return;
-        if (isVisible && !document.hidden) {
-          webglRef.current.start();
-        } else {
+        // Only pause if completely out of view or document is hidden
+        if (!isVisible || document.hidden) {
           webglRef.current.pause();
+        } else {
+          webglRef.current.start();
         }
       },
-      { threshold: [0, 0.01, 0.1] }
+      { threshold: [0, 0.01, 0.1, 0.5, 1.0] }
     );
     io.observe(container);
     intersectionObserverRef.current = io;
