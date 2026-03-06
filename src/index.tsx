@@ -1,7 +1,7 @@
 import { serve } from "bun";
 import index from "./index.html";
 
-const server = serve({
+const config = {
   routes: {
     // Serve index.html for all unmatched routes.
     "/*": index,
@@ -30,6 +30,13 @@ const server = serve({
   },
 
   development: process.env.NODE_ENV !== "production",
-});
+};
+
+let server;
+try {
+  server = serve({ port: 3000, ...config });
+} catch {
+  server = serve({ port: 3001, ...config });
+}
 
 console.log(`🚀 Server running at ${server.url}`);
