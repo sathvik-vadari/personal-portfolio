@@ -11,6 +11,11 @@ import {
 import TextType from "./components/TextType";
 import LiquidEther from "./components/LiquidEther";
 import logo from "./assets/personal-logo.png";
+import customerIntelImg from "./assets/customer-intelligence.png";
+import mlopsImg from "./assets/mlops-preview.svg";
+import videogameImg from "./assets/videogame-preview.svg";
+import connectplayImg from "./assets/connectplay-preview.svg";
+import trashfinderImg from "./assets/trashfinder-preview.svg";
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -277,215 +282,394 @@ function App() {
             Projects
           </h2>
 
-          <div className="divide-y divide-neutral-800">
-            <div className="py-8 sm:py-12">
-              <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="text-xl sm:text-2xl font-light">Voice Serve</h3>
-                <div className="flex gap-4 shrink-0 pt-1">
+          <div className="space-y-6 sm:space-y-8 mb-8 sm:mb-12">
+            <div className="group rounded-xl overflow-hidden bg-neutral-900/20 border border-neutral-800 hover:border-neutral-500 transition-all duration-500">
+              <a
+                href="https://quickstock-bolna.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="flex items-center gap-1.5 px-3 py-2 bg-neutral-950/60 border-b border-neutral-800/50">
+                  <div className="flex gap-1.5">
+                    <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                    <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                    <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  </div>
+                  <div className="ml-2 flex-1 h-5 rounded-md bg-neutral-800/40 flex items-center px-2">
+                    <span className="text-[10px] text-neutral-600 truncate">
+                      quickstock-bolna.vercel.app
+                    </span>
+                  </div>
+                  <ExternalLink className="w-3 h-3 text-neutral-700 group-hover:text-neutral-400 transition-colors" />
+                </div>
+                <div className="relative w-full h-40 sm:h-52 overflow-hidden bg-neutral-950">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-3xl sm:text-4xl font-extralight text-neutral-800 tracking-widest select-none">
+                      QuickStock
+                    </span>
+                  </div>
+                  <iframe
+                    src="https://quickstock-bolna.vercel.app/"
+                    title="QuickStock demo"
+                    className="absolute top-0 left-0 border-0 pointer-events-none opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                    style={{
+                      width: "200%",
+                      height: "200%",
+                      transform: "scale(0.5)",
+                      transformOrigin: "top left",
+                    }}
+                    tabIndex={-1}
+                    loading="lazy"
+                    sandbox="allow-scripts allow-same-origin"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-900" />
+                </div>
+              </a>
+              <div className="p-5 sm:p-6">
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <h3 className="text-xl sm:text-2xl font-light">QuickStock</h3>
                   <a
-                    href="https://voice-serve.vercel.app"
+                    href="https://github.com/sathvik-vadari/quick-stock-bolna"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-500 hover:text-white transition-colors"
-                    aria-label="Live demo"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="https://github.com/sathvik-vadari/voice-serve"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neutral-500 hover:text-white transition-colors"
+                    className="text-neutral-500 hover:text-white transition-colors shrink-0 pt-1"
                     aria-label="GitHub"
                   >
                     <Github className="w-4 h-4" />
                   </a>
                 </div>
-              </div>
-              <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
-                Tell it what you need — it finds nearby stores, calls them using
-                AI, compares online deals in parallel, and books delivery.
-                Multi-LLM orchestration with regional voice and language support
-                across Indian cities.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Python",
-                  "FastAPI",
-                  "OpenAI",
-                  "Gemini",
-                  "VAPI",
-                  "Google Maps",
-                  "Next.js",
-                ].map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="py-8 sm:py-12">
-              <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="text-xl sm:text-2xl font-light">
-                  Neutrino Analytics Platform
-                </h3>
-                <div className="flex gap-4 shrink-0 pt-1">
-                  <a
-                    href="https://8bit.ai/neutrino/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neutral-500 hover:text-white transition-colors"
-                    aria-label="Learn more"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
+                <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
+                  AI-powered voice commerce platform that calls nearby stores in
+                  parallel using Bolna voice AI, checks product availability and
+                  pricing from live phone conversations, and compares results
+                  against online deals — delivering ranked options in real time
+                  via SSE.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Python",
+                    "FastAPI",
+                    "Bolna",
+                    "Azure OpenAI",
+                    "Gemini",
+                    "Google Maps",
+                    "Next.js",
+                    "PostgreSQL",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
-              <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
-                Enterprise AI analytics platform with a Text-to-SQL engine (92%
-                execution accuracy), RAG pipelines, and multi-agent
-                orchestration — making complex data queryable in plain English.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Python", "LangChain", "PostgreSQL", "RAG", "LLMs"].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
-                    >
-                      {tech}
-                    </span>
-                  ),
-                )}
-              </div>
             </div>
 
-            <div className="py-8 sm:py-12">
-              <h3 className="text-xl sm:text-2xl font-light mb-3">
-                Customer Intelligence Platform
-              </h3>
-              <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
-                Automated pipeline processing 30K+ emails and 100+ meetings
-                monthly. Extracts sentiment, intent, and customer profiles using
-                open-source LLMs — zero manual review.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Python", "NLP", "Open-source LLMs", "FastAPI"].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
-                    >
-                      {tech}
+            <div className="group rounded-xl overflow-hidden bg-neutral-900/20 border border-neutral-800 hover:border-neutral-500 transition-all duration-500">
+              <a
+                href="https://www.8bit.ai/neutrino/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="flex items-center gap-1.5 px-3 py-2 bg-neutral-950/60 border-b border-neutral-800/50">
+                  <div className="flex gap-1.5">
+                    <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                    <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                    <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  </div>
+                  <div className="ml-2 flex-1 h-5 rounded-md bg-neutral-800/40 flex items-center px-2">
+                    <span className="text-[10px] text-neutral-600 truncate">
+                      8bit.ai/neutrino
                     </span>
-                  ),
-                )}
-              </div>
-            </div>
-
-            <div className="py-8 sm:py-12">
-              <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="text-xl sm:text-2xl font-light">
-                  ML Ops on Kubernetes
+                  </div>
+                  <ExternalLink className="w-3 h-3 text-neutral-700 group-hover:text-neutral-400 transition-colors" />
+                </div>
+                <div className="relative w-full h-40 sm:h-52 overflow-hidden bg-neutral-950">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-3xl sm:text-4xl font-extralight text-neutral-800 tracking-widest select-none">
+                      Neutrino
+                    </span>
+                  </div>
+                  <iframe
+                    src="https://www.8bit.ai/neutrino/"
+                    title="Neutrino Analytics"
+                    className="absolute top-0 left-0 border-0 pointer-events-none opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                    style={{
+                      width: "200%",
+                      height: "200%",
+                      transform: "scale(0.5)",
+                      transformOrigin: "top left",
+                    }}
+                    tabIndex={-1}
+                    loading="lazy"
+                    sandbox="allow-scripts allow-same-origin"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-900" />
+                </div>
+              </a>
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-light mb-3">
+                  Neutrino
                 </h3>
-                <div className="flex gap-4 shrink-0 pt-1">
+                <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
+                  Enterprise AI analytics platform with a Text-to-SQL engine
+                  (92% execution accuracy), RAG pipelines, and multi-agent
+                  orchestration — making complex data queryable in plain
+                  English.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Python", "LangChain", "PostgreSQL", "RAG", "LLMs"].map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
+                      >
+                        {tech}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6 sm:space-y-8">
+            <div className="group rounded-xl overflow-hidden bg-neutral-900/20 border border-neutral-800 hover:border-neutral-500 transition-all duration-500">
+              <div className="flex items-center gap-1.5 px-3 py-2 bg-neutral-950/60 border-b border-neutral-800/50">
+                <div className="flex gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                </div>
+                <div className="ml-2 flex-1 h-5 rounded-md bg-neutral-800/40 flex items-center px-2">
+                  <span className="text-[10px] text-neutral-600 truncate">
+                    customer-journeys.8bit.ai/console
+                  </span>
+                </div>
+              </div>
+              <div className="relative w-full h-40 sm:h-52 overflow-hidden bg-neutral-950">
+                <img
+                  src={customerIntelImg}
+                  alt="Customer Intelligence Platform"
+                  className="w-full h-full object-cover object-top opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-900" />
+              </div>
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-light mb-3">
+                  Customer Intelligence Platform
+                </h3>
+                <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
+                  Automated pipeline processing 30K+ emails and 100+ meetings
+                  monthly. Extracts sentiment, intent, and customer profiles
+                  using open-source LLMs — zero manual review.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Python", "NLP", "Open-source LLMs", "FastAPI"].map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
+                      >
+                        {tech}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="group rounded-xl overflow-hidden bg-neutral-900/20 border border-neutral-800 hover:border-neutral-500 transition-all duration-500">
+              <div className="flex items-center gap-1.5 px-3 py-2 bg-neutral-950/60 border-b border-neutral-800/50">
+                <div className="flex gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                </div>
+                <div className="ml-2 flex-1 h-5 rounded-md bg-neutral-800/40 flex items-center px-2">
+                  <span className="text-[10px] text-neutral-600 truncate">
+                    kubectl get pods -n ml-ops
+                  </span>
+                </div>
+              </div>
+              <div className="relative w-full h-40 sm:h-52 overflow-hidden bg-neutral-950">
+                <img
+                  src={mlopsImg}
+                  alt="ML Ops on Kubernetes"
+                  className="w-full h-full object-cover object-top opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-900" />
+              </div>
+              <div className="p-5 sm:p-6">
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <h3 className="text-xl sm:text-2xl font-light">
+                    ML Ops on Kubernetes
+                  </h3>
                   <a
                     href="https://github.com/8bitai/model-operator"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-500 hover:text-white transition-colors"
+                    className="text-neutral-500 hover:text-white transition-colors shrink-0 pt-1"
                     aria-label="GitHub"
                   >
                     <Github className="w-4 h-4" />
                   </a>
                 </div>
+                <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
+                  K8s Operator for automated ML model deployments with
+                  Prometheus & Grafana observability. Built for inventory
+                  prediction workloads with zero-downtime rollouts.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Kubernetes", "Python", "Prometheus", "Grafana"].map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
+                      >
+                        {tech}
+                      </span>
+                    ),
+                  )}
+                </div>
               </div>
-              <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
-                K8s Operator for automated ML model deployments with Prometheus
-                & Grafana observability. Built for inventory prediction
-                workloads with zero-downtime rollouts.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Kubernetes", "Python", "Prometheus", "Grafana"].map(
-                  (tech) => (
+            </div>
+
+            <div className="group rounded-xl overflow-hidden bg-neutral-900/20 border border-neutral-800 hover:border-neutral-500 transition-all duration-500">
+              <div className="flex items-center gap-1.5 px-3 py-2 bg-neutral-950/60 border-b border-neutral-800/50">
+                <div className="flex gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                </div>
+                <div className="ml-2 flex-1 h-5 rounded-md bg-neutral-800/40 flex items-center px-2">
+                  <span className="text-[10px] text-neutral-600 truncate">
+                    jupyter notebook — sales_analysis.ipynb
+                  </span>
+                </div>
+              </div>
+              <div className="relative w-full h-40 sm:h-52 overflow-hidden bg-neutral-950">
+                <img
+                  src={videogameImg}
+                  alt="Video Game Sales Analysis"
+                  className="w-full h-full object-cover object-top opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-900" />
+              </div>
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-light mb-3">
+                  Video Game Sales Prediction
+                </h3>
+                <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
+                  End-to-end Data Science project exploring the relationship
+                  between video game sales and playtime. Followed the full DS
+                  lifecycle — data collection, modelling, and analysis — for
+                  academic research.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Python", "R", "Data Science", "Research"].map((tech) => (
                     <span
                       key={tech}
                       className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
                     >
                       {tech}
                     </span>
-                  ),
-                )}
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div className="py-8 sm:py-12">
-              <h3 className="text-xl sm:text-2xl font-light mb-3">
-                Video Game Sales Prediction
-              </h3>
-              <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
-                End-to-end Data Science project exploring the relationship
-                between video game sales and playtime. Followed the full DS
-                lifecycle — data collection, modelling, and analysis — for
-                academic research.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Python", "R", "Data Science", "Research"].map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
-                  >
-                    {tech}
+            <div className="group rounded-xl overflow-hidden bg-neutral-900/20 border border-neutral-800 hover:border-neutral-500 transition-all duration-500">
+              <div className="flex items-center gap-1.5 px-3 py-2 bg-neutral-950/60 border-b border-neutral-800/50">
+                <div className="flex gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                </div>
+                <div className="ml-2 flex-1 h-5 rounded-md bg-neutral-800/40 flex items-center px-2">
+                  <span className="text-[10px] text-neutral-600 truncate">
+                    connectplay.app
                   </span>
-                ))}
+                </div>
+              </div>
+              <div className="relative w-full h-40 sm:h-52 overflow-hidden bg-neutral-950">
+                <img
+                  src={connectplayImg}
+                  alt="ConnectPlay"
+                  className="w-full h-full object-cover object-top opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-900" />
+              </div>
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-light mb-3">
+                  ConnectPlay
+                </h3>
+                <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
+                  Platform that connects individuals looking to join team
+                  sports. Built full-stack with the MERN stack — matchmaking,
+                  team formation, and scheduling in one place.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["MongoDB", "Express.js", "React", "Node.js"].map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
+                      >
+                        {tech}
+                      </span>
+                    ),
+                  )}
+                </div>
               </div>
             </div>
 
-            <div className="py-8 sm:py-12">
-              <h3 className="text-xl sm:text-2xl font-light mb-3">
-                ConnectPlay
-              </h3>
-              <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
-                Platform that connects individuals looking to join team sports.
-                Built full-stack with the MERN stack — matchmaking, team
-                formation, and scheduling in one place.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["MongoDB", "Express.js", "React", "Node.js"].map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
-                  >
-                    {tech}
+            <div className="group rounded-xl overflow-hidden bg-neutral-900/20 border border-neutral-800 hover:border-neutral-500 transition-all duration-500">
+              <div className="flex items-center gap-1.5 px-3 py-2 bg-neutral-950/60 border-b border-neutral-800/50">
+                <div className="flex gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                  <div className="w-2 h-2 rounded-full bg-neutral-700" />
+                </div>
+                <div className="ml-2 flex-1 h-5 rounded-md bg-neutral-800/40 flex items-center px-2">
+                  <span className="text-[10px] text-neutral-600 truncate">
+                    trashfinder.swachhbharat.gov.in
                   </span>
-                ))}
+                </div>
               </div>
-            </div>
-
-            <div className="py-8 sm:py-12">
-              <h3 className="text-xl sm:text-2xl font-light mb-3">
-                Trash Finder
-              </h3>
-              <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
-                Built under the Swachh Bharat Initiative — a web app that lets
-                anyone pin and report trash locations on a live map, helping
-                municipalities prioritize cleanup.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Java", "Spring Boot", "Google Maps API", "HTML", "CSS"].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
-                    >
-                      {tech}
-                    </span>
-                  ),
-                )}
+              <div className="relative w-full h-40 sm:h-52 overflow-hidden bg-neutral-950">
+                <img
+                  src={trashfinderImg}
+                  alt="Trash Finder"
+                  className="w-full h-full object-cover object-top opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-900" />
+              </div>
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-light mb-3">
+                  Trash Finder
+                </h3>
+                <p className="text-sm sm:text-base text-neutral-400 mb-5 leading-relaxed">
+                  Built under the Swachh Bharat Initiative — a web app that
+                  lets anyone pin and report trash locations on a live map,
+                  helping municipalities prioritize cleanup.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Java", "Spring Boot", "Google Maps API", "HTML", "CSS"].map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
+                      >
+                        {tech}
+                      </span>
+                    ),
+                  )}
+                </div>
               </div>
             </div>
           </div>

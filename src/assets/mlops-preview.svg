@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#0a0a0a"/>
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="56" height="500" fill="#111111"/>
+  <rect x="16" y="20" width="24" height="24" rx="4" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <rect x="16" y="60" width="24" height="24" rx="4" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <rect x="16" y="100" width="24" height="24" rx="4" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <!-- Header -->
+  <rect x="56" y="0" width="744" height="48" fill="#111111"/>
+  <rect x="76" y="14" width="120" height="20" rx="4" fill="#1a1a1a"/>
+  <text x="96" y="28" font-family="monospace" font-size="11" fill="#666">K8s Dashboard</text>
+  <!-- Pod Cards -->
+  <rect x="76" y="68" width="220" height="100" rx="8" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <circle cx="96" cy="88" r="6" fill="#22c55e"/>
+  <text x="110" y="92" font-family="monospace" font-size="11" fill="#888">model-v2.3</text>
+  <text x="96" y="112" font-family="monospace" font-size="10" fill="#555">CPU: 24%  MEM: 1.2Gi</text>
+  <rect x="96" y="124" width="180" height="6" rx="3" fill="#1a1a1a"/>
+  <rect x="96" y="124" width="43" height="6" rx="3" fill="#22c55e" opacity="0.7"/>
+  <rect x="96" y="138" width="180" height="6" rx="3" fill="#1a1a1a"/>
+  <rect x="96" y="138" width="108" height="6" rx="3" fill="#3b82f6" opacity="0.7"/>
+
+  <rect x="310" y="68" width="220" height="100" rx="8" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <circle cx="330" cy="88" r="6" fill="#22c55e"/>
+  <text x="344" y="92" font-family="monospace" font-size="11" fill="#888">model-v2.2</text>
+  <text x="330" y="112" font-family="monospace" font-size="10" fill="#555">CPU: 18%  MEM: 0.9Gi</text>
+  <rect x="330" y="124" width="180" height="6" rx="3" fill="#1a1a1a"/>
+  <rect x="330" y="124" width="32" height="6" rx="3" fill="#22c55e" opacity="0.7"/>
+  <rect x="330" y="138" width="180" height="6" rx="3" fill="#1a1a1a"/>
+  <rect x="330" y="138" width="81" height="6" rx="3" fill="#3b82f6" opacity="0.7"/>
+
+  <rect x="544" y="68" width="220" height="100" rx="8" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <circle cx="564" cy="88" r="6" fill="#f59e0b"/>
+  <text x="578" y="92" font-family="monospace" font-size="11" fill="#888">model-v2.1</text>
+  <text x="564" y="112" font-family="monospace" font-size="10" fill="#555">CPU: 0%   MEM: 0.0Gi</text>
+  <text x="564" y="132" font-family="monospace" font-size="10" fill="#f59e0b">SCALING DOWN</text>
+
+  <!-- Metrics Chart Area -->
+  <rect x="76" y="188" width="340" height="180" rx="8" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="96" y="212" font-family="monospace" font-size="11" fill="#888">Request Latency (p99)</text>
+  <!-- Chart line -->
+  <polyline points="96,340 130,330 164,335 198,320 232,310 266,325 300,305 334,290 368,300 396,285" stroke="#8b5cf6" stroke-width="2" fill="none" opacity="0.8"/>
+  <polyline points="96,350 130,345 164,348 198,340 232,338 266,342 300,335 334,330 368,332 396,328" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.5"/>
+  <!-- Y axis labels -->
+  <text x="76" y="280" font-family="monospace" font-size="9" fill="#444">200ms</text>
+  <text x="76" y="320" font-family="monospace" font-size="9" fill="#444">100ms</text>
+  <text x="76" y="360" font-family="monospace" font-size="9" fill="#444">50ms</text>
+
+  <!-- Prometheus Metrics -->
+  <rect x="430" y="188" width="334" height="180" rx="8" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="450" y="212" font-family="monospace" font-size="11" fill="#888">Deployment Status</text>
+  <rect x="450" y="228" width="294" height="28" rx="4" fill="#1a1a1a"/>
+  <text x="462" y="246" font-family="monospace" font-size="10" fill="#22c55e">● prediction-svc    3/3 Ready</text>
+  <rect x="450" y="264" width="294" height="28" rx="4" fill="#1a1a1a"/>
+  <text x="462" y="282" font-family="monospace" font-size="10" fill="#22c55e">● feature-store     2/2 Ready</text>
+  <rect x="450" y="300" width="294" height="28" rx="4" fill="#1a1a1a"/>
+  <text x="462" y="318" font-family="monospace" font-size="10" fill="#f59e0b">● model-trainer     1/3 Updating</text>
+  <rect x="450" y="336" width="294" height="28" rx="4" fill="#1a1a1a"/>
+  <text x="462" y="354" font-family="monospace" font-size="10" fill="#22c55e">● monitoring         1/1 Ready</text>
+
+  <!-- Bottom bar -->
+  <rect x="76" y="388" width="688" height="92" rx="8" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="96" y="412" font-family="monospace" font-size="11" fill="#888">Recent Events</text>
+  <text x="96" y="432" font-family="monospace" font-size="9" fill="#555">12:04:23  Rollout model-v2.3 completed successfully (0 downtime)</text>
+  <text x="96" y="448" font-family="monospace" font-size="9" fill="#555">12:03:58  Health check passed for prediction-svc-7d4f8b</text>
+  <text x="96" y="464" font-family="monospace" font-size="9" fill="#555">12:03:12  Scaling model-v2.1 to 0 replicas (canary promotion)</text>
+</svg>

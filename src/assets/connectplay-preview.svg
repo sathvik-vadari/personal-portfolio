@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#0a0a0a"/>
+  <!-- Top Nav -->
+  <rect x="0" y="0" width="800" height="52" fill="#111"/>
+  <text x="32" y="32" font-family="sans-serif" font-size="16" fill="#fff" font-weight="bold">ConnectPlay</text>
+  <rect x="540" y="14" width="70" height="24" rx="12" fill="#1a1a1a"/>
+  <text x="554" y="30" font-family="sans-serif" font-size="10" fill="#888">Explore</text>
+  <rect x="620" y="14" width="80" height="24" rx="12" fill="#1a1a1a"/>
+  <text x="632" y="30" font-family="sans-serif" font-size="10" fill="#888">My Teams</text>
+  <rect x="710" y="14" width="60" height="24" rx="12" fill="#3b82f6"/>
+  <text x="722" y="30" font-family="sans-serif" font-size="10" fill="#fff">Join</text>
+
+  <!-- Search Bar -->
+  <rect x="32" y="72" width="736" height="40" rx="8" fill="#111" stroke="#222" stroke-width="1"/>
+  <text x="52" y="96" font-family="sans-serif" font-size="12" fill="#444">Search sports, locations, or teams...</text>
+
+  <!-- Sport Filter Pills -->
+  <rect x="32" y="128" width="80" height="28" rx="14" fill="#3b82f6"/>
+  <text x="50" y="146" font-family="sans-serif" font-size="11" fill="#fff">Football</text>
+  <rect x="122" y="128" width="76" height="28" rx="14" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="136" y="146" font-family="sans-serif" font-size="11" fill="#888">Cricket</text>
+  <rect x="208" y="128" width="90" height="28" rx="14" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="220" y="146" font-family="sans-serif" font-size="11" fill="#888">Basketball</text>
+  <rect x="308" y="128" width="72" height="28" rx="14" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="322" y="146" font-family="sans-serif" font-size="11" fill="#888">Tennis</text>
+  <rect x="390" y="128" width="88" height="28" rx="14" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="404" y="146" font-family="sans-serif" font-size="11" fill="#888">Badminton</text>
+
+  <!-- Match Cards Grid -->
+  <!-- Card 1 -->
+  <rect x="32" y="176" width="236" height="150" rx="10" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="32" y="176" width="236" height="40" rx="10" fill="#1e3a5f"/>
+  <rect x="32" y="200" width="236" height="16" fill="#1e3a5f"/>
+  <text x="52" y="200" font-family="sans-serif" font-size="12" fill="#93c5fd" font-weight="bold">5-a-side Football</text>
+  <text x="52" y="236" font-family="sans-serif" font-size="10" fill="#888">Jubilee Hills, Hyderabad</text>
+  <text x="52" y="254" font-family="sans-serif" font-size="10" fill="#555">Tomorrow, 6:00 PM</text>
+  <text x="52" y="280" font-family="sans-serif" font-size="10" fill="#22c55e">3 spots left</text>
+  <rect x="52" y="292" width="80" height="22" rx="4" fill="#3b82f6"/>
+  <text x="68" y="307" font-family="sans-serif" font-size="10" fill="#fff">Join Now</text>
+
+  <!-- Card 2 -->
+  <rect x="282" y="176" width="236" height="150" rx="10" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="282" y="176" width="236" height="40" rx="10" fill="#3b1e1e"/>
+  <rect x="282" y="200" width="236" height="16" fill="#3b1e1e"/>
+  <text x="302" y="200" font-family="sans-serif" font-size="12" fill="#fca5a5" font-weight="bold">Cricket Match</text>
+  <text x="302" y="236" font-family="sans-serif" font-size="10" fill="#888">Gachibowli Stadium</text>
+  <text x="302" y="254" font-family="sans-serif" font-size="10" fill="#555">Saturday, 7:00 AM</text>
+  <text x="302" y="280" font-family="sans-serif" font-size="10" fill="#f59e0b">1 spot left</text>
+  <rect x="302" y="292" width="80" height="22" rx="4" fill="#3b82f6"/>
+  <text x="318" y="307" font-family="sans-serif" font-size="10" fill="#fff">Join Now</text>
+
+  <!-- Card 3 -->
+  <rect x="532" y="176" width="236" height="150" rx="10" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="532" y="176" width="236" height="40" rx="10" fill="#1e3b2e"/>
+  <rect x="532" y="200" width="236" height="16" fill="#1e3b2e"/>
+  <text x="552" y="200" font-family="sans-serif" font-size="12" fill="#86efac" font-weight="bold">Badminton Doubles</text>
+  <text x="552" y="236" font-family="sans-serif" font-size="10" fill="#888">Kondapur Indoor Court</text>
+  <text x="552" y="254" font-family="sans-serif" font-size="10" fill="#555">Sunday, 5:30 PM</text>
+  <text x="552" y="280" font-family="sans-serif" font-size="10" fill="#22c55e">2 spots left</text>
+  <rect x="552" y="292" width="80" height="22" rx="4" fill="#3b82f6"/>
+  <text x="568" y="307" font-family="sans-serif" font-size="10" fill="#fff">Join Now</text>
+
+  <!-- My Upcoming Section -->
+  <text x="32" y="360" font-family="sans-serif" font-size="14" fill="#888" font-weight="bold">Your Upcoming Games</text>
+  <rect x="32" y="376" width="736" height="48" rx="8" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <circle cx="64" cy="400" r="14" fill="#1e3a5f"/>
+  <text x="58" y="404" font-family="sans-serif" font-size="10" fill="#93c5fd">F</text>
+  <text x="90" y="396" font-family="sans-serif" font-size="11" fill="#fff">Weekend Football League</text>
+  <text x="90" y="412" font-family="sans-serif" font-size="10" fill="#555">Sat 7 PM · HITEC City Ground · 8/10 joined</text>
+  <rect x="680" y="388" width="68" height="24" rx="4" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="694" y="404" font-family="sans-serif" font-size="10" fill="#888">Details</text>
+
+  <rect x="32" y="434" width="736" height="48" rx="8" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <circle cx="64" cy="458" r="14" fill="#3b1e1e"/>
+  <text x="58" y="462" font-family="sans-serif" font-size="10" fill="#fca5a5">C</text>
+  <text x="90" y="454" font-family="sans-serif" font-size="11" fill="#fff">Sunday Morning Cricket</text>
+  <text x="90" y="470" font-family="sans-serif" font-size="10" fill="#555">Sun 6 AM · Oval Ground · 14/22 joined</text>
+  <rect x="680" y="446" width="68" height="24" rx="4" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="694" y="462" font-family="sans-serif" font-size="10" fill="#888">Details</text>
+</svg>

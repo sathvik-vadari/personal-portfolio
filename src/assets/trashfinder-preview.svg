@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#0a0a0a"/>
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="48" fill="#111"/>
+  <text x="32" y="30" font-family="sans-serif" font-size="14" fill="#fff" font-weight="bold">Trash Finder</text>
+  <text x="150" y="30" font-family="sans-serif" font-size="11" fill="#555">Swachh Bharat Initiative</text>
+  <rect x="640" y="12" width="130" height="24" rx="4" fill="#22c55e" opacity="0.9"/>
+  <text x="660" y="28" font-family="sans-serif" font-size="10" fill="#fff">Report Location</text>
+
+  <!-- Map Area -->
+  <rect x="0" y="48" width="560" height="452" fill="#0d1117"/>
+  <!-- Grid lines for map feel -->
+  <line x1="0" y1="148" x2="560" y2="148" stroke="#161b22" stroke-width="0.5"/>
+  <line x1="0" y1="248" x2="560" y2="248" stroke="#161b22" stroke-width="0.5"/>
+  <line x1="0" y1="348" x2="560" y2="348" stroke="#161b22" stroke-width="0.5"/>
+  <line x1="140" y1="48" x2="140" y2="500" stroke="#161b22" stroke-width="0.5"/>
+  <line x1="280" y1="48" x2="280" y2="500" stroke="#161b22" stroke-width="0.5"/>
+  <line x1="420" y1="48" x2="420" y2="500" stroke="#161b22" stroke-width="0.5"/>
+  <!-- Roads -->
+  <line x1="80" y1="48" x2="400" y2="500" stroke="#1a2332" stroke-width="3"/>
+  <line x1="0" y1="200" x2="560" y2="280" stroke="#1a2332" stroke-width="3"/>
+  <line x1="200" y1="48" x2="200" y2="500" stroke="#1a2332" stroke-width="2"/>
+  <line x1="0" y1="350" x2="560" y2="350" stroke="#1a2332" stroke-width="2"/>
+  <!-- Pins - reported trash locations -->
+  <circle cx="120" cy="180" r="8" fill="#ef4444" opacity="0.8"/>
+  <circle cx="120" cy="180" r="14" fill="#ef4444" opacity="0.15"/>
+  <circle cx="300" cy="250" r="10" fill="#ef4444" opacity="0.9"/>
+  <circle cx="300" cy="250" r="18" fill="#ef4444" opacity="0.15"/>
+  <circle cx="200" cy="350" r="7" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="200" cy="350" r="12" fill="#f59e0b" opacity="0.15"/>
+  <circle cx="420" cy="150" r="9" fill="#ef4444" opacity="0.8"/>
+  <circle cx="420" cy="150" r="16" fill="#ef4444" opacity="0.15"/>
+  <circle cx="350" cy="400" r="8" fill="#22c55e" opacity="0.8"/>
+  <circle cx="350" cy="400" r="14" fill="#22c55e" opacity="0.15"/>
+  <circle cx="80" cy="320" r="6" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="80" cy="320" r="10" fill="#f59e0b" opacity="0.15"/>
+  <circle cx="480" cy="300" r="9" fill="#ef4444" opacity="0.8"/>
+  <circle cx="480" cy="300" r="16" fill="#ef4444" opacity="0.15"/>
+  <circle cx="160" cy="450" r="7" fill="#22c55e" opacity="0.8"/>
+  <circle cx="160" cy="450" r="12" fill="#22c55e" opacity="0.15"/>
+
+  <!-- Side Panel -->
+  <rect x="560" y="48" width="240" height="452" fill="#111"/>
+  <text x="580" y="80" font-family="sans-serif" font-size="13" fill="#fff" font-weight="bold">Reports Overview</text>
+  <!-- Stats -->
+  <rect x="580" y="96" width="200" height="50" rx="6" fill="#1a1a1a"/>
+  <text x="596" y="116" font-family="sans-serif" font-size="10" fill="#555">Active Reports</text>
+  <text x="596" y="136" font-family="sans-serif" font-size="18" fill="#ef4444" font-weight="bold">127</text>
+  <rect x="580" y="156" width="200" height="50" rx="6" fill="#1a1a1a"/>
+  <text x="596" y="176" font-family="sans-serif" font-size="10" fill="#555">In Progress</text>
+  <text x="596" y="196" font-family="sans-serif" font-size="18" fill="#f59e0b" font-weight="bold">34</text>
+  <rect x="580" y="216" width="200" height="50" rx="6" fill="#1a1a1a"/>
+  <text x="596" y="236" font-family="sans-serif" font-size="10" fill="#555">Resolved</text>
+  <text x="596" y="256" font-family="sans-serif" font-size="18" fill="#22c55e" font-weight="bold">892</text>
+
+  <!-- Legend -->
+  <text x="580" y="296" font-family="sans-serif" font-size="11" fill="#888">Legend</text>
+  <circle cx="592" cy="316" r="5" fill="#ef4444"/>
+  <text x="604" y="320" font-family="sans-serif" font-size="10" fill="#888">High Priority</text>
+  <circle cx="592" cy="336" r="5" fill="#f59e0b"/>
+  <text x="604" y="340" font-family="sans-serif" font-size="10" fill="#888">In Progress</text>
+  <circle cx="592" cy="356" r="5" fill="#22c55e"/>
+  <text x="604" y="360" font-family="sans-serif" font-size="10" fill="#888">Resolved</text>
+
+  <!-- Recent Reports -->
+  <text x="580" y="396" font-family="sans-serif" font-size="11" fill="#888">Recent Reports</text>
+  <rect x="580" y="408" width="200" height="36" rx="4" fill="#1a1a1a"/>
+  <text x="596" y="424" font-family="sans-serif" font-size="9" fill="#ef4444">Banjara Hills Rd 12</text>
+  <text x="596" y="438" font-family="sans-serif" font-size="8" fill="#555">2 hrs ago · Construction waste</text>
+  <rect x="580" y="452" width="200" height="36" rx="4" fill="#1a1a1a"/>
+  <text x="596" y="468" font-family="sans-serif" font-size="9" fill="#f59e0b">HITEC City Junction</text>
+  <text x="596" y="482" font-family="sans-serif" font-size="8" fill="#555">5 hrs ago · Mixed waste pile</text>
+</svg>
