@@ -5,6 +5,7 @@ import {
   Linkedin,
   Mail,
   ExternalLink,
+  FileText,
   Menu,
   X,
 } from "lucide-react";
@@ -73,7 +74,7 @@ function App() {
             />
           </button>
           <div className="hidden md:flex gap-8 text-sm">
-            {["work", "projects", "contact"].map((section) => (
+            {["research", "work", "projects", "contact"].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -98,7 +99,7 @@ function App() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-black border-t border-neutral-800">
             <div className="flex flex-col px-4 py-4 gap-4">
-              {["work", "projects", "contact"].map((section) => (
+              {["research", "work", "projects", "contact"].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -123,7 +124,7 @@ function App() {
           <div className="text-base sm:text-lg md:text-xl text-neutral-400 font-light mb-6 max-w-2xl w-full text-center min-h-[60px] flex items-center justify-center px-4">
             <TextType
               text={[
-                "AI Engineer",
+                "AI Engineer & Researcher",
                 "Didn't even need to prompt this portfolio into existence",
                 "(okay maybe just a little)",
                 "Building AI systems that sometimes work",
@@ -148,6 +149,130 @@ function App() {
           >
             <ArrowDown className="w-6 h-6 text-neutral-500" />
           </button>
+        </div>
+      </section>
+
+      <section
+        id="research"
+        className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 relative z-10 w-full overflow-x-hidden"
+      >
+        <div className="max-w-4xl mx-auto w-full">
+          <h2 className="text-3xl sm:text-4xl font-extralight mb-8 sm:mb-12 md:mb-16 tracking-tight">
+            Research
+          </h2>
+
+          <div className="group relative rounded-xl overflow-hidden bg-neutral-900/30 border border-neutral-800 hover:border-neutral-500 transition-all duration-500">
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-neutral-500 to-transparent" />
+            <div className="p-6 sm:p-8 md:p-10">
+              <div className="flex flex-wrap items-center gap-2 mb-5">
+                <span className="text-[10px] sm:text-xs uppercase tracking-widest px-2.5 py-1 border border-neutral-600 text-neutral-200">
+                  First Author
+                </span>
+                <span className="text-[10px] sm:text-xs uppercase tracking-widest px-2.5 py-1 border border-neutral-800 text-neutral-500">
+                  arXiv 2605.23918
+                </span>
+                <span className="text-[10px] sm:text-xs uppercase tracking-widest px-2.5 py-1 border border-neutral-800 text-neutral-500">
+                  Submitted · HotCarbon '26
+                </span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-light leading-snug mb-4">
+                The Model Parking Tax: Quantifying the Hidden Energy Cost of
+                Always-On GPU Model Deployment
+              </h3>
+
+              <p className="text-sm sm:text-base text-neutral-400 leading-relaxed mb-8">
+                AI inference systems keep models loaded in GPU memory around the
+                clock, treating idle power as a fixed cost of readiness. This
+                work decomposes that cost for the first time across three GPU
+                architectures — combining 18 days of production telemetry with
+                controlled dose-response experiments. The finding: idle power is
+                a fixed cost of the{" "}
+                <span className="text-white font-medium">CUDA context</span>,
+                not model size, and NVIDIA's{" "}
+                <span className="text-white font-medium">
+                  CUDA_DISABLE_PERF_BOOST
+                </span>{" "}
+                flag eliminates it with no steady-state latency penalty.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-neutral-800 border border-neutral-800 mb-8">
+                <div className="bg-neutral-950 px-4 py-5 text-center">
+                  <div className="text-2xl sm:text-3xl font-extralight text-white mb-1">
+                    26–66 W
+                  </div>
+                  <div className="text-xs text-neutral-500 leading-snug">
+                    Per-GPU idle "parking tax"
+                  </div>
+                </div>
+                <div className="bg-neutral-950 px-4 py-5 text-center">
+                  <div className="text-2xl sm:text-3xl font-extralight text-white mb-1">
+                    &lt;0.02 W/GB
+                  </div>
+                  <div className="text-xs text-neutral-500 leading-snug">
+                    Marginal VRAM cost — negligible
+                  </div>
+                </div>
+                <div className="bg-neutral-950 px-4 py-5 text-center">
+                  <div className="text-2xl sm:text-3xl font-extralight text-white mb-1">
+                    92–1,745 GWh
+                  </div>
+                  <div className="text-xs text-neutral-500 leading-snug">
+                    Annual waste at industry scale
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                {[
+                  "GPU Energy",
+                  "DVFS",
+                  "Model Serving",
+                  "Sustainability",
+                  "Systems",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-3 py-1 border border-neutral-800 text-neutral-500"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <a
+                  href="https://arxiv.org/abs/2605.23918"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-5 py-2.5 border border-neutral-700 hover:border-white hover:bg-neutral-900 transition-all text-sm"
+                >
+                  <FileText className="w-4 h-4" />
+                  Read on arXiv
+                  <ExternalLink className="w-3.5 h-3.5 text-neutral-500" />
+                </a>
+                <a
+                  href="https://github.com/8bitai/gpu-parking-tax"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-5 py-2.5 border border-neutral-700 hover:border-white hover:bg-neutral-900 transition-all text-sm"
+                >
+                  <Github className="w-4 h-4" />
+                  Code &amp; Data
+                  <ExternalLink className="w-3.5 h-3.5 text-neutral-500" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 sm:mt-8 border-l-2 border-neutral-700 pl-4 sm:pl-6 md:pl-8">
+            <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
+              <span className="text-white font-medium">Ongoing —</span>{" "}
+              Pursuing follow-up papers extending the parking-tax model into
+              predictive, traffic-aware GPU energy controllers, alongside new
+              directions in efficient and sustainable AI systems.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -685,9 +810,10 @@ function App() {
             Let's Connect
           </h2>
           <p className="text-sm sm:text-base text-neutral-400 mb-8 sm:mb-12 leading-relaxed px-4">
-            Building AI systems that actually work in production. Open to
-            interesting conversations about ML infrastructure, LLMs, and the
-            occasional existential crisis about AGI.
+            Building AI systems that actually work in production — and
+            researching how to make them more efficient. Open to conversations
+            about ML infrastructure, GPU energy, LLMs, and the occasional
+            existential crisis about AGI.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8 sm:mb-12 px-4">

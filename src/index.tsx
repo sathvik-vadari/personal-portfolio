@@ -32,11 +32,18 @@ const config = {
   development: process.env.NODE_ENV !== "production",
 };
 
-let server;
-try {
-  server = serve({ port: 3000, ...config });
-} catch {
-  server = serve({ port: 3001, ...config });
+function startServer() {
+  for (const port of [3000, 3001, 3002, 3003]) {
+    try {
+      return serve({ port, ...config });
+    } catch (err) {
+      if ((err as { code?: string }).code !== "EADDRINUSE") throw err;
+    }
+  }
+  // All preferred ports busy — let the OS assign any free port.
+  return serve({ port: 0, ...config });
 }
+
+const server = startServer();
 
 console.log(`🚀 Server running at ${server.url}`);
